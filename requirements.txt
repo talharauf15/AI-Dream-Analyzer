@@ -6,7 +6,6 @@ sounddevice
 CFFI
 numpy
 torch
-portaudio19-dev
 pandas
 torchaudio
 whisper
