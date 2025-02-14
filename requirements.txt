@@ -1,6 +1,9 @@
 streamlit
 openai-whisper
-numpy
-sounddevice
 scipy
 google-generativeai 
+sounddevice
+CFFI
+numpy
+torch
+portaudio19-dev
