@@ -2,7 +2,6 @@ streamlit
 openai-whisper
 scipy
 google-generativeai 
-sounddevice
 CFFI
 numpy
 torch
