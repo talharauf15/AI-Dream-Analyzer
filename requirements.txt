@@ -9,3 +9,6 @@ pandas
 torchaudio
 sounddevice
 whisper
+sounddevice
+pyaudio
+ffmpeg
