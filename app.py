@@ -35,7 +35,7 @@
 
 # If the dream includes specific symbols, please explain them and provide possible meanings related to those symbols. You can also make connections between the dreamer's waking life and the content of the dream, suggesting ways the dream may reflect subconscious thoughts, desires, or fears.
 
-# The dreamer’s description may be vague or abstract, so feel free to ask clarifying questions if needed and at last provide the summary.
+# The dreamer's description may be vague or abstract, so feel free to ask clarifying questions if needed and at last provide the summary.
 
 # Example:
 # Dreamer: "I was flying over a city, and I felt both free and scared."
@@ -195,7 +195,7 @@ st.markdown("""
         user-select: none;
     }
 
-    .stButton button:hover,:focus {
+    .stButton button:hover, .stButton button:focus {
         color: #ffffff;
         background: #008cff;
         border: 1px solid #008cff;
@@ -223,12 +223,17 @@ st.markdown("""
     /* Footer Styling */
     footer {
         text-align: center;
-        padding: 0px;
+        padding: 10px;
         font-size: 14px;
         color: #bbb;
-        position: absolute;
+        position: fixed;
         bottom: 0;
+        left: 0;
         width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        backdrop-filter: blur(5px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     </style>
     """, unsafe_allow_html=True)
@@ -250,7 +255,7 @@ whisper_model = load_whisper_model()
 def generate_gemini_response(dream_description):
     """Generate interpretation using Gemini API"""
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash-latest')
         prompt = f"""
         You are a Dream Interpreter. 
         I will provide you with a description of a dream, and your task is to analyze it and provide a detailed interpretation based on psychological, symbolic, and emotional themes. 
@@ -343,7 +348,7 @@ if st.session_state.recorded_text:
 
 # Add some footer text with branding or additional info
 st.markdown("""
-    <footer style="text-align:center; padding:0px; font-size:12px;">
+    <footer>
         Created with ❤️ by Talha Rauf
     </footer>
     """, unsafe_allow_html=True)
