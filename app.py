@@ -104,18 +104,13 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# Configure Gemini API
-# if 'GEMINI_API_KEY' in st.secrets:
-#     genai.configure(api_key=st.secrets['GEMINI_API_KEY'])
-# else:
-#     st.error("Gemini API key not found in secrets!")
+# Check for API key in Streamlit secrets or environment variables
+api_key = st.secrets.get("gcp", {}).get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
 
-    
-if "gcp" in st.secrets and "GEMINI_API_KEY" in st.secrets["gcp"]:
-    api_key = st.secrets["gcp"]["GEMINI_API_KEY"]
+if api_key:
     genai.configure(api_key=api_key)
 else:
-    st.error("Gemini API key not found in secrets!")
+    st.error("⚠️ Gemini API key not found!")
 
 # Load Whisper model
 @st.cache_resource
