@@ -6,8 +6,11 @@
 
 **AI Dream Analyzer** is an AI-powered application that interprets and analyzes dreams using advanced natural language processing models.
 
-<img width="956" alt="image" src="https://github.com/user-attachments/assets/83c0fbe2-e8b8-408f-8f55-bbceecdf7fd6" />
- 
+<img width="960" alt="Screenshot 2025-03-15 174621" src="https://github.com/user-attachments/assets/605bca5f-2f88-4ada-9f99-e32092d5d449" />
+<img width="960" alt="Screenshot 2025-03-15 175110" src="https://github.com/user-attachments/assets/ab56de09-eb63-4b3c-b1a5-f5878fe6cc5e" />
+<img width="959" alt="Screenshot 2025-03-15 175146" src="https://github.com/user-attachments/assets/bbdf968f-2c61-468f-980f-cd77cee4f8b2" />
+<img width="959" alt="Screenshot 2025-03-15 175233" src="https://github.com/user-attachments/assets/78610830-32fe-46ca-ba59-ba4168cac83d" />
+
 
 ---
 
